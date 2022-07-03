@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     <!-- Site Metas -->
+    <title>E-Learning</title>  
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="css/custom.css"> -->
+
+    <!-- Modernizer for Portfolio -->
+	<script src="./pagesJavascript/jquery-3.6.0.min.js"></script>
+	<script src="./pagesJavascript//login.js"></script>
+    <script src="js/modernizer.js"></script>
+
+</head>
+<body class="host_version"> 
+
+	<!-- Modal -->
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header tit-up">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Customer Login</h4>
+			</div>
+			<div class="modal-body customer-box">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs">
+					<li><a class="active" href="#Login" data-toggle="tab">Login</a></li>
+					<li><a href="#Registration" data-toggle="tab">Registration</a></li>
+				</ul>
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div class="tab-pane active" id="Login">
+						<form role="form" class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="loginEmail" placeholder="Email" type="email">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="loginPassword" placeholder="password" type="password">
+								</div>
+							</div>
+						</form>
+						<div class="col-sm-12 col-md-12 col-lg-12">
+						<span id="InvalidLogin" style="color:red;font-size:large;text-align: center;display:none;">Invalid Username Or Password</span>
+					   </div>
+						<div class="row">
+							<div class="col-sm-10">
+								<button type="" class="btn btn-light btn-radius btn-brd grd1 " id="loginButton" >
+									Submit
+								</button>
+								
+								<a class="for-pwd" href="javascript:;">Forgot your password?</a>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="Registration">
+						<form role="form" class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="regName" placeholder="Name" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="regEmail" placeholder="Email" type="email">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="regMobile" placeholder="Mobile" type="number">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="regPassword" placeholder="Password" type="password">
+								</div>
+							</div>
+							<div class="row">							
+								<div class="col-sm-10">
+									<button type="button" id="registerUser" class="btn btn-light btn-radius btn-brd grd1">
+										Register
+									</button>
+									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
+										Cancel</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	</div>
+
+    <!-- LOADER -->
+	<div id="preloader">
+		<div class="loader-container">
+			<div class="progress-br float shadow">
+				<div class="progress__item"></div>
+			</div>
+		</div>
+	</div>
+	<!-- END LOADER -->	
+	
+	<!-- Start header -->
+	<header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html">
+					<img src="" alt="" />
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbars-host">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active"><a class="nav-link" href="#" data-toggle="modal" data-target="#login">Login</a></li>	
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- End header -->
+	
+	<div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel" data-pause="hover" data-interval="false" >
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+			<li data-target="#carouselExampleControls" data-slide-to="1"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="carousel-item active">
+				<div id="home" class="first-section" style="background-image:url('images/slider-01.jpg');">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-right">
+									<div class="big-tagline">
+										<h2><strong>E-Learning </strong> education College</h2>
+										<p class="lead">All E-Learning related courses are here </p>
+											
+									</div>
+								</div>
+							</div><!-- end row -->            
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			
+			<div class="carousel-item">
+				<div id="home" class="first-section" style="background-image:url('images/slider-03.jpg');">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-center">
+									<div class="big-tagline">
+										<h2 data-animation="animated zoomInRight"><strong>Simple IT</strong> Courses</h2>
+										<p class="lead" data-animation="animated fadeInLeft">Choose according to your passion and make our efforts fruitful for you.</p>
+											<a href="#" class="hover-btn-new"><span>Contact Us</span></a>
+									</div>
+								</div>
+							</div><!-- end row -->            
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			<!-- Left Control -->
+			<a class="new-effect carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+				<span class="fa fa-angle-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+
+			<!-- Right Control -->
+			<a class="new-effect carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+				<span class="fa fa-angle-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+	
+    <div id="overviews" class="section wb">
+        <div class="container">
+            <div class="section-title row text-center">
+                <div class="col-md-8 offset-md-2">
+                    <h3>About</h3>
+                    <p class="lead">Our Goal is to provide you with the knowledge and skills you need, to be able to craft the kinds of stories that you want to create.</p>
+                </div>
+            </div><!-- end title -->
+        
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h4>2022 BEST SmartEDU E-Learning Stuff</h4>
+                        <h2>Welcome to E-Learning Smart Coaching</h2>
+                        <p>Our Goal is to provide you with the knowledge and skills you need, to be able to craft the kinds of stories that you want to create.</p>
+
+                        <p> Our Goal is to provide you with the knowledge and skills you need, to be able to craft the kinds of stories that you want to create. </p>
+
+                        <a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+				
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="images/MainLOGO.jpg" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+			</div>
+			<div class="row align-items-center">
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="images/about_03.jpg" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+				
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h2>The standard of our Online Coaching is maintained since 2005</h2>
+                        <p>Education is the basic necessity of life. It is an integral tool that aids the overall growth and development. Education has a plethora of meanings and educates and empowers you within the four walls of the classroom as well as imbibe in your environment. Learning is an education that makes sense, and it needs awareness to reach the remote corners of the country.</p>
+
+                        <p> Our Goal is to provide you with the knowledge and skills you need, to be able to craft the kinds of stories that you want to create. </p>
+
+                        <a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+        <div id="testimonials" class="parallax section db parallax-off" style="background-image:url('images/parallax_04.jpg');">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Responses</h3>
+                <p>Our Goal is to provide you with the knowledge and skills you need. </p>
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="testi-carousel owl-carousel owl-theme">
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
+                                <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
+                                <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
+                                <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
+                                <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
+                                <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
+                                <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div><!-- end testimonial -->
+                    </div><!-- end carousel -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <div class="parallax section dbcolor">
+        <div class="container">
+            
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>About US</h3>
+                        </div>
+                        <p> Start, switch, or advance your career with more than 50 courses, Professional Certificates, and degrees from world-class universities and companies.</p>   
+						<div class="footer-right">
+							<ul class="footer-links-soi">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-github"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							</ul><!-- end links -->
+						</div>						
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+				<div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Information Link</h3>
+                        </div>
+                        <ul class="footer-links">
+                            <li><a href="#">Home</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Contact</a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Contact Details</h3>
+                        </div>
+
+                        <ul class="footer-links">
+                            <li><a href="mailto:#">info@e-learning.com</a></li>
+                            <li><a href="#">www.CUILahore.com</a></li>
+                            <li>PO Box LAHORE DEFENCE HOUSING SOICETY 54792	Punjab</li>
+                            <li>+92 3 8376 6284</li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+    
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+	<script src="js/timeline.min.js"></script>
+	<!-- <script>
+		timeline(document.querySelectorAll('.timeline'), {
+			forceVerticalMode: 700,
+			mode: 'horizontal',
+			verticalStartPosition: 'left',
+			visibleItems: 4
+		}); -->
+	<!-- </script> -->
+</body>
+</html>
